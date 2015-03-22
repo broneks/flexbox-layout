@@ -1,0 +1,75 @@
+//
+// Media - Min 1000px
+//
+
+@media (min-width: 1000px) {
+  //
+  // global
+  //
+  .mobile-visible {
+    display: none;
+  }
+
+  .switch-row {
+    @include flex-direction(row);
+  }
+
+
+  //
+  // header
+  //
+  .top-logo {
+    margin: 0;
+  }
+
+  .top-nav {
+    @include order(1);
+
+    background-color: $lgray;
+    margin-bottom: 0;
+
+    .nav-links {
+      @include align-items(flex-end);
+      
+      position: static;
+      margin: 40px 10px 0;
+      height: auto;
+      z-index: 0;
+      background-color: transparent;
+
+      &.opened {
+        border: 0;
+      }
+
+      li + li {
+        border-top: 0;
+      }
+
+      a {
+        display: block;
+        padding: 10px 15px;
+        text-align: center;
+
+        &:hover,
+        &:focus {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .bottom-nav {
+    @include justify-content(space-around);
+
+    .nav-column {
+      margin-right: 0;
+    }
+  }
+
+  //
+  // main
+  //
+  #main-content {
+  
+  }
+}

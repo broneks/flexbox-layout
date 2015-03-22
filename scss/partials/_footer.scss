@@ -1,0 +1,45 @@
+//
+// Footer
+//
+
+#bottom-footer {
+  border-top: 5px solid $mgray; 
+}
+
+.bottom-nav {
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  @include justify-content(flex-start);
+  @include flex-wrap(wrap);
+
+  a {
+    display: inline-block;
+    padding: 2px 0;
+    text-decoration: none;
+    font-size: 0.9em;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .nav-column {
+    margin-right: 20px;
+  }
+
+  .nav-heading {
+    margin: 20px 0 10px;
+    font-size: 1.05em;
+  }
+
+  .nav-links {
+    padding-left: 15px;
+    list-style: disc;
+  }
+}
+
+.footer-copyright {
+  padding-top: 20px;
+  text-align: right;
+}

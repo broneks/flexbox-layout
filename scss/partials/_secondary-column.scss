@@ -1,0 +1,9 @@
+//
+// Secondary Column
+//
+
+#secondary-column {
+  background-color: coral;
+
+  @include flex(2.2);
+}

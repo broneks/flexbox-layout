@@ -1,0 +1,11 @@
+//
+// Media - Min 515px
+//
+
+@media (min-width: 515px) {
+  .bottom-nav {
+    &.row {
+      @include flex-direction(row);
+    }
+  }
+}

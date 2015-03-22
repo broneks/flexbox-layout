@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Bronek Szulc">
+  <title>SiteName</title>
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <header id="top-header" class="column">
+      <nav class="top-nav">
+        <button id="toggle-menu" class="mobile-visible">Menu</button>
+
+        <ul class="nav-links list-unstyled switch-row">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Actualit&eacute;s</a></li>
+          <li><a href="#">En direct des r&eacute;gions</a></li>
+          <li><a href="#">Rep&egrave;res financiers</a></li>
+          <li><a href="#">Notre Offre</a></li>
+          <li><a href="#">De nous &agrave; vous</a></li>
+        </ul>
+      </nav>
+
+      <div class="top-details switch-row">
+        <h1 class="top-logo">SiteName</h1>
+
+        <div class="top-side row">
+          <div class="side-items row">
+            <a href="#">Newsletter</a>
+            <a href="#">Abonnement RSS</a>
+          </div>
+
+          <div class="top-search row">
+            <span class="search-label">Recherche</span>
+
+            <input type="text" class="search-input">
+            <button class="search-button">archives</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="main-content" class="switch-row">
+      <div id="primary-column" class="main-column column">primary</div>
+      <div id="secondary-column" class="main-column column">secondary</div>
+      <div id="tertiary-column" class="main-column column">tertiary</div>
+    </div>
+
+    <footer id="bottom-footer" class="column">
+      <nav class="bottom-nav row">
+        <div class="nav-column">
+          <h6 class="nav-heading">Rubriques</h6>
+
+          <ul class="nav-links list-unstyled">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Actualit&eacute;s</a></li>
+            <li><a href="#">En direct des r&eacute;gions</a></li>
+            <li><a href="#">Rep&egrave;res financiers</a></li>
+            <li><a href="#">Notre Offre</a></li>
+            <li><a href="#">De nous &agrave; vous</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-column">
+          <h6 class="nav-heading">Expertise</h6>
+
+          <ul class="nav-links list-unstyled">
+            <li><a href="#">Finances et fiscalit&eacute;</a></li>
+            <li><a href="#">AInvestissement et &eacute;quipements</a></li>
+            <li><a href="#">Environement</a></li>
+            <li><a href="#">Habitat / urbanisme</a></li>
+            <li><a href="#">Sant&egrave;</a></li>
+            <li><a href="#">Social / Services</a></li>
+            <li><a href="#">Transport</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-column">
+          <h6 class="nav-heading">Abonnement</h6>
+
+          <ul class="nav-links list-unstyled">
+            <li><a href="#">Tous les flux RSS</a></li>
+            <li><a href="#">Flux RSS par expertise</a></li>
+            <li><a href="#">e-Newsletter E'cod&egrave;fi</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-column">
+          <h6 class="nav-heading">A propos</h6>
+
+          <ul class="nav-links list-unstyled">
+            <li><a href="#">Qui sommes-nous?</a></li>
+            <li><a href="#">Plan du site</a></li>
+            <li><a href="#">Mentions l&eacute;gales</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-column">
+          <h6 class="nav-heading">Contact</h6>
+
+          <ul class="nav-links list-unstyled">
+            <li><a href="#">Contactez-nous</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Envoyez vos questions</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <small class="footer-copyright">Copyright &copy;2015. Touts droits r&eacute;serv&eacute;s</small>
+    </footer>
+  </div>
+
+  <script>
+    (function() {
+      var menuButton  = document.getElementById('toggle-menu');
+      var topNavLinks = document.querySelector('.top-nav .nav-links');
+
+      menuButton.addEventListener('click', function() {
+        if ( topNavLinks.classList.contains('opened'))
+          topNavLinks.classList.remove('opened');
+        else
+          topNavLinks.classList.add('opened');
+      }, false);
+
+      document.addEventListener('click', function(event) {
+        if (event.target !== menuButton && !menuButton.contains(event.target))
+          topNavLinks.classList.remove('opened');
+      });
+    })();
+  </script>
+</body>
+</html>

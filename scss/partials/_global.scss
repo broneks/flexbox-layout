@@ -1,0 +1,63 @@
+//
+// Global
+//
+
+// overrides
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $dgray;
+}
+
+button {
+  border-radius: 0;
+  border: 1px solid $mgray;
+  background-color: $lgray;
+  color: $dgray;
+}
+
+input[type="text"] {
+  border-radius: 0;
+  border: 1px solid $mgray;
+  color: $dgray;
+}
+
+
+// utility classes
+
+.main-wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.switch-row,
+.row,
+.column {
+  @include clearfix;
+  @include display(flex);
+}
+.switch-row {
+  @include flex-direction(column);
+}
+.row {
+  @include flex-direction(row);
+}
+.column {
+  @include flex-direction(column);
+}
+
+.list-unstyled {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.mobile-visible {
+  display: block;
+  border-color: #bbb;
+}

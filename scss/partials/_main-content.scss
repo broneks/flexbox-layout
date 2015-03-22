@@ -1,0 +1,15 @@
+//
+// Main Content
+//
+
+#main-content {
+  padding: 10px 0;
+}
+
+.main-column {
+  padding: 15px;
+}
+
+@import '_primary-column';
+@import '_secondary-column';
+@import '_tertiary-column';

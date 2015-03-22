@@ -1,0 +1,132 @@
+//
+// Top Header
+//
+
+.top-side {
+  &.row {
+    @include flex-direction(column);
+  }
+}
+
+.top-details,
+.top-nav {
+  a {
+    text-decoration: none;
+  }
+}
+
+.top-details {
+  padding-bottom: 5px;
+}
+
+.top-logo {
+  @include flex(1);
+
+  margin: 10px 0 30px;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+.top-side {
+  @include align-items(flex-end);
+  @include justify-content(flex-end);
+
+  .side-items {
+    @include align-items(flex-end);
+    margin-bottom: 15px;
+
+    a {
+      position: relative;
+      padding: 0 15px 0 20px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";        
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-color: #444;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .top-search {
+    @include align-items(flex-end);
+
+    .search-input,
+    .search-button {
+      height: 22px;
+    }
+
+    .search-input {
+      margin: 0 10px;
+    }
+
+    .search-button {
+      line-height: 1em;
+      font-size: 0.9em;
+    }
+  }
+}
+
+.top-nav {
+  position: relative;
+  background-color: $lgray;
+  margin-bottom: 31px;
+
+  .nav-links {
+    @include align-items(stretch);
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 31px 0;
+    height: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: $lgray;
+
+    &.opened {
+      height: auto;
+      border: 1px solid #ddd;
+      border-top: 0;
+    }
+
+    li + li {
+      border-top: 1px solid #ddd;
+    }
+
+    a {
+      display: block;
+      padding: 10px 15px;
+      text-align: left;
+
+      &:hover,
+      &:focus {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+#toggle-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  width: 100%;
+  padding: 5px;
+}

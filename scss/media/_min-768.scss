@@ -1,0 +1,27 @@
+//
+// Media - Min 768px
+//
+
+@media (min-width: 768px) {
+  .top-side {
+    &.row {
+      @include flex-direction(row);
+    }
+  }
+
+  .top-side {
+    @include align-items(stretch);
+
+    .side-items {
+      margin-right: 15px;
+      margin-bottom: 0;
+
+      a {
+        &:last-child {
+          padding-right: 15px;
+          border-right: 1px solid #000;
+        }
+      }
+    }
+  }
+}
