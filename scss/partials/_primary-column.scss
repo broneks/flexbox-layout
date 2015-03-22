@@ -3,7 +3,83 @@
 //
 
 #primary-column {
-  // background-color: honeydew;
-
   @include flex(3);
+
+  // increase top-level vertical padding
+  &.main-column > .pad {
+    padding-top: $section-padding + 10;
+    padding-bottom: $section-padding + 10;
+  }
+
+  // increase heading vertical margin
+  .text-block {
+    h1, h2, h3, h4, h5, h6 {
+      margin: 20px 0;
+    }
+  }
+}
+
+article h3 {
+  font-size: 1.6em;
+}
+
+.meta-info {
+  p {
+    margin: 0;
+  }
+
+  .related {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 2px solid $gray;
+  }
+
+  .published-on {
+    font-size: 0.9em;
+  }
+}
+
+.tag-silhouette {
+  position: relative;
+  background-color: $gray;
+  width: 20px;
+  height: 16px;
+  margin-right: 10px;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 10px;
+    border-color: transparent transparent transparent $gray;
+  }
+}
+
+.article-footer {
+  @include flex-direction(column);
+}
+
+.article-link {
+  @include flex(1);
+
+  font-weight: bold;
+}
+
+.article-tags {
+  @include flex(1.5);
+
+  margin-top: 20px;
+
+  .tags-label {
+    min-width: 40px;
+    margin: 0 10px 0 5px;
+    font-weight: bold;
+  }
 }

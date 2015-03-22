@@ -18,6 +18,10 @@
   //
   // header
   //
+  #top-header {
+    border-bottom: 0;
+  }
+
   .top-logo {
     margin: 0;
   }
@@ -70,13 +74,13 @@
   // main
   //
   #main-content {
-    & > .column {    
+    .main-column {    
       & > .pad {
         padding-left: $section-padding;
         padding-right: $section-padding;
       }
 
-      & + .column {
+      & + .main-column {
         border-top: 0;
         border-left: 1px solid $mgray;
       }
@@ -91,10 +95,9 @@
     }
 
     #primary-column {
-
-    }
-    #secondary-column {
-      
+      & > .pad {
+        padding-left: 0;
+      }
     }
     #tertiary-column {
       & > .pad {

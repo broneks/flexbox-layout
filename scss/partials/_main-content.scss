@@ -5,8 +5,7 @@
 #main-content {
   padding: 15px 0;
 
-  & > .column {
-    
+  .main-column {
     & > .pad {
       padding-left: 0;
       padding-right: 0;
@@ -18,7 +17,7 @@
       }
     }
 
-    & + .column {
+    & + .main-column {
       border-top: 1px solid $mgray;
     }
 
@@ -27,10 +26,6 @@
       border-top: 1px solid $mgray;
     }
   }
-}
-
-.main-column {
-  
 }
 
 .spotlight-section {
@@ -43,6 +38,11 @@
   padding: 2px 10px;
   background: $dgray;
   color: $lgray;
+
+  &.mute-text,
+  .mute-text {
+    color: $gray;
+  }
 }
 
 .article-header {
@@ -52,7 +52,7 @@
 }
 
 .article-footer {
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 0.9em;
 }
 
@@ -68,7 +68,7 @@
   }
 
   p {
-    margin: 5px 0;
+    margin: 10px 0;
     color: $mute;
   }
 }

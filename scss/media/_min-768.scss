@@ -3,6 +3,9 @@
 //
 
 @media (min-width: 768px) {
+  //
+  // top header
+  //
   .top-side {
     &.row {
       @include flex-direction(row);
@@ -23,5 +26,17 @@
         }
       }
     }
+  }
+
+  //
+  // main content
+  //
+  .article-footer {
+    @include flex-direction(row);
+    @include justify-content(space-between);
+  }
+
+  .article-tags {
+    margin-top: 0;
   }
 }

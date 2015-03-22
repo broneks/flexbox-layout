@@ -3,8 +3,6 @@
 //
 
 #secondary-column {
-  // background-color: coral;
-
   @include flex(2.2);
 }
 
@@ -22,7 +20,7 @@
     @include justify-content(center);
     @include align-items(center);
 
-    background-color: $calendar-card;
+    background-color: $gray;
     padding: 5px;
     width: 90px;
     height: 90px;

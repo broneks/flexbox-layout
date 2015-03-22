@@ -2,6 +2,10 @@
 // Top Header
 //
 
+#top-header {
+  border-bottom: 1px solid $mgray;
+}
+
 .top-side {
   &.row {
     @include flex-direction(column);
