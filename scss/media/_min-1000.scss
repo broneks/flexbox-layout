@@ -70,6 +70,40 @@
   // main
   //
   #main-content {
-  
+    & > .column {    
+      & > .pad {
+        padding-left: $section-padding;
+        padding-right: $section-padding;
+      }
+
+      & + .column {
+        border-top: 0;
+        border-left: 1px solid $mgray;
+      }
+    }
+
+    #primary-column,
+    #secondary-column,
+    #tertiary-column {
+      & > .pad:first-child {
+        padding-top: 0;
+      }
+    }
+
+    #primary-column {
+
+    }
+    #secondary-column {
+      
+    }
+    #tertiary-column {
+      & > .pad {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .date-and-link {
+    @include justify-content(space-between);
   }
 }

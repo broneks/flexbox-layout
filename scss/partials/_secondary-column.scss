@@ -3,7 +3,56 @@
 //
 
 #secondary-column {
-  background-color: coral;
+  // background-color: coral;
 
   @include flex(2.2);
+}
+
+.date-and-link {
+  .date-posted {
+    padding-right: 20px;
+  }
+}
+
+.agenda-block {
+
+  margin-bottom: 15px;
+
+  .calendar-card {
+    @include justify-content(center);
+    @include align-items(center);
+
+    background-color: $calendar-card;
+    padding: 5px;
+    width: 90px;
+    height: 90px;
+    font-weight: bold;
+  }
+
+  .date-number {
+    font-size: 3em;
+  }
+
+  .agenda-details {
+    @include flex(1);
+
+    margin-left: 10px;
+
+    p {
+      margin: 0;
+      font-size: 0.9em;
+
+      & + p {
+        margin-top: 10px;
+      }
+    }
+
+    .date {
+      font-size: 0.8em;
+    }
+  }
+
+  .agenda-heading {
+    margin: 0 0 10px;
+  }
 }

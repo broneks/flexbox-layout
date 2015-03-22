@@ -12,6 +12,15 @@ a {
   color: $dgray;
 }
 
+p {
+  line-height: 1.3em;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+}
+
 button {
   border-radius: 0;
   border: 1px solid $mgray;
@@ -23,6 +32,15 @@ input[type="text"] {
   border-radius: 0;
   border: 1px solid $mgray;
   color: $dgray;
+}
+
+nav a {
+  text-decoration: none;
+  
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 
@@ -56,8 +74,39 @@ input[type="text"] {
   padding-left: 0;
   list-style: none;
 }
+.list-no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
 
 .mobile-visible {
   display: block;
   border-color: #bbb;
+}
+
+.pad {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  padding-right: $section-padding;
+  padding-left: $section-padding;
+}
+
+.mute-text {
+  color: $mute;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

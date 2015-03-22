@@ -3,12 +3,76 @@
 //
 
 #main-content {
-  padding: 10px 0;
+  padding: 15px 0;
+
+  & > .column {
+    
+    & > .pad {
+      padding-left: 0;
+      padding-right: 0;
+
+      // keep horizonal padding for .spotlight-section
+      &.spotlight-section {
+        padding-left: $section-padding;
+        padding-right: $section-padding;
+      }
+    }
+
+    & + .column {
+      border-top: 1px solid $mgray;
+    }
+
+    & > article + article,
+    & > aside + aside {
+      border-top: 1px solid $mgray;
+    }
+  }
 }
 
 .main-column {
-  padding: 15px;
+  
 }
+
+.spotlight-section {
+  background-color: $lgray;
+}
+
+.box-heading {
+  display: inline-block;
+  margin-top: 0;
+  padding: 2px 10px;
+  background: $dgray;
+  color: $lgray;
+}
+
+.article-header {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 15px;
+  }
+}
+
+.article-footer {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.text-block {
+  font-size: 0.9em;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+  }
+
+  & + .text-block {
+    margin-top: 20px;
+  }
+
+  p {
+    margin: 5px 0;
+    color: $mute;
+  }
+}
+
 
 @import '_primary-column';
 @import '_secondary-column';

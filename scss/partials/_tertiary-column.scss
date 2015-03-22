@@ -3,7 +3,33 @@
 //
 
 #tertiary-column {
-  background-color: gold;
+  // background-color: gold;
 
   @include flex(2.2);
+}
+
+.side-nav {
+  h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+}
+
+.side-box-header {
+  margin-bottom: 20px;
+
+  h4 {
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+}
+
+.side-box {
+  background-color: $lgray;
+  overflow: hidden;
+
+  & + .side-box {
+    margin-top: $section-padding;
+  }
 }
