@@ -5,13 +5,15 @@ Here's the wireframe that I've taken and adapted into a responsive layout using 
 ![wireframe-layout](https://raw.githubusercontent.com/Bszulc/Flexbox-Layout/master/wireframe.jpg)
 
 
+
 ##Flexbox-ified Result
 
-Large resolutions:
+###Large resolutions:
 
 ![flexbox-layout-large-resolutions](https://raw.githubusercontent.com/Bszulc/Flexbox-Layout/master/result-screenshot.png)
 
 
-Smaller resolutions:
+
+###Smaller resolutions:
 
 ![flexbox-layout-small-resolutions](https://raw.githubusercontent.com/Bszulc/Flexbox-Layout/master/result-screenshot-2.png)
